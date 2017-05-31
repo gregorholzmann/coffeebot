@@ -21,8 +21,7 @@ def arp_display(pkt):
     if pkt[ARP].op == 1:
         if pkt[ARP].psrc == '0.0.0.0':
             if pkt[ARP].hwsrc == constants.MAC_ADDRESS:
-                print 'butts'
-                # send_message()
+                send_message()
 
 
 print sniff(prn=arp_display, filter="arp", store=0)
